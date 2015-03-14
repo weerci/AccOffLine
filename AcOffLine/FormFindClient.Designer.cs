@@ -184,6 +184,7 @@
             this.btnChoose.TabIndex = 0;
             this.btnChoose.Text = "Выбрать";
             this.btnChoose.UseVisualStyleBackColor = true;
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
             // 
             // panel3
             // 

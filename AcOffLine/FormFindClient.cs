@@ -26,5 +26,10 @@ namespace AcOffLine
         {
 
         }
+
+        private void btnChoose_Click(object sender, EventArgs e)
+        {
+            new FormInvoiceAccount().ShowDialog();
+        }
     }
 }
