@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace AcOffLine
 {
-    public partial class FormFindClient : Form
+    public partial class FormStateAccount : Form
     {
-        public FormFindClient()
+        public FormStateAccount()
         {
             InitializeComponent();
-        }
-
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            new FormInvoiceAccount().ShowDialog();
-        }
-
-        private void FormFindClient_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

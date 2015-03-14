@@ -59,11 +59,29 @@
     <Compile Include="FormFindClient.Designer.cs">
       <DependentUpon>FormFindClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInvoiceAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInvoiceAccount.Designer.cs">
+      <DependentUpon>FormInvoiceAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrintAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrintAccount.Designer.cs">
+      <DependentUpon>FormPrintAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStateAccount.Designer.cs">
+      <DependentUpon>FormStateAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +91,17 @@
     <EmbeddedResource Include="FormFindClient.resx">
       <DependentUpon>FormFindClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInvoiceAccount.resx">
+      <DependentUpon>FormInvoiceAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrintAccount.resx">
+      <DependentUpon>FormPrintAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStateAccount.resx">
+      <DependentUpon>FormStateAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

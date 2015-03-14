@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFindClient));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnFindClient = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -38,11 +39,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnFindClient = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnChoose = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnChoose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColumnFIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +71,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(703, 115);
             this.panel1.TabIndex = 0;
+            // 
+            // btnFindClient
+            // 
+            this.btnFindClient.Location = new System.Drawing.Point(493, 46);
+            this.btnFindClient.Name = "btnFindClient";
+            this.btnFindClient.Size = new System.Drawing.Size(96, 23);
+            this.btnFindClient.TabIndex = 17;
+            this.btnFindClient.Text = "Найти клиента";
+            this.btnFindClient.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -136,15 +145,6 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Фамилия:";
             // 
-            // btnFindClient
-            // 
-            this.btnFindClient.Location = new System.Drawing.Point(493, 46);
-            this.btnFindClient.Name = "btnFindClient";
-            this.btnFindClient.Size = new System.Drawing.Size(96, 23);
-            this.btnFindClient.TabIndex = 17;
-            this.btnFindClient.Text = "Найти клиента";
-            this.btnFindClient.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnClose);
@@ -156,33 +156,34 @@
             this.panel2.Size = new System.Drawing.Size(703, 57);
             this.panel2.TabIndex = 1;
             // 
-            // btnChoose
-            // 
-            this.btnChoose.Location = new System.Drawing.Point(454, 22);
-            this.btnChoose.Name = "btnChoose";
-            this.btnChoose.Size = new System.Drawing.Size(75, 23);
-            this.btnChoose.TabIndex = 0;
-            this.btnChoose.Text = "Выбрать";
-            this.btnChoose.UseVisualStyleBackColor = true;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(535, 22);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 1;
-            this.btnNew.Text = "Новый";
-            this.btnNew.UseVisualStyleBackColor = true;
-            // 
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(616, 22);
+            this.btnClose.Location = new System.Drawing.Point(616, 17);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Выход";
             this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(535, 17);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 1;
+            this.btnNew.Text = "Новый";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnChoose
+            // 
+            this.btnChoose.Location = new System.Drawing.Point(454, 17);
+            this.btnChoose.Name = "btnChoose";
+            this.btnChoose.Size = new System.Drawing.Size(75, 23);
+            this.btnChoose.TabIndex = 0;
+            this.btnChoose.Text = "Выбрать";
+            this.btnChoose.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -247,8 +248,10 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormFindClient";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Поиск клиента";
+            this.Load += new System.EventHandler(this.FormFindClient_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -257,17 +257,18 @@
             // 
             // btnChoose
             // 
-            this.btnChoose.Location = new System.Drawing.Point(535, 22);
+            this.btnChoose.Location = new System.Drawing.Point(535, 17);
             this.btnChoose.Name = "btnChoose";
             this.btnChoose.Size = new System.Drawing.Size(75, 23);
             this.btnChoose.TabIndex = 1;
             this.btnChoose.Text = "Выбрать";
             this.btnChoose.UseVisualStyleBackColor = true;
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
             // 
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(616, 22);
+            this.btnClose.Location = new System.Drawing.Point(616, 17);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 0;
@@ -286,6 +287,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormBilledAccount";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Выставленные счета";
             this.Resize += new System.EventHandler(this.FormBilledAccount_Resize);
