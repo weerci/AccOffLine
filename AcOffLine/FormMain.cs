@@ -24,7 +24,7 @@ namespace AcOffLine
 
         private void btnBillAccount_Click(object sender, EventArgs e)
         {
-
+            new FormFindClient().ShowDialog();
         }
     }
 }

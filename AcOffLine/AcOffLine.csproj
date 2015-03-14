@@ -53,6 +53,12 @@
     <Compile Include="FormBilledAccount.Designer.cs">
       <DependentUpon>FormBilledAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFindClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFindClient.Designer.cs">
+      <DependentUpon>FormFindClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBilledAccount.resx">
       <DependentUpon>FormBilledAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFindClient.resx">
+      <DependentUpon>FormFindClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

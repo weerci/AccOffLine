@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBilledAccount));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnFindAccount = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -42,8 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnFindAccount = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColumnNumberAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDateAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,13 +50,14 @@
             this.ColumnSummAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnStatusAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBasisPayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.btnChoose = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,6 +87,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(468, 130);
             this.panel3.TabIndex = 0;
+            // 
+            // btnFindAccount
+            // 
+            this.btnFindAccount.Location = new System.Drawing.Point(374, 54);
+            this.btnFindAccount.Name = "btnFindAccount";
+            this.btnFindAccount.Size = new System.Drawing.Size(75, 23);
+            this.btnFindAccount.TabIndex = 10;
+            this.btnFindAccount.Text = "Найти счет";
+            this.btnFindAccount.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -180,25 +189,6 @@
             this.panel2.Size = new System.Drawing.Size(703, 299);
             this.panel2.TabIndex = 1;
             // 
-            // btnFindAccount
-            // 
-            this.btnFindAccount.Location = new System.Drawing.Point(374, 54);
-            this.btnFindAccount.Name = "btnFindAccount";
-            this.btnFindAccount.Size = new System.Drawing.Size(75, 23);
-            this.btnFindAccount.TabIndex = 10;
-            this.btnFindAccount.Text = "Найти счет";
-            this.btnFindAccount.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnChoose);
-            this.panel4.Controls.Add(this.btnClose);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 242);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(703, 57);
-            this.panel4.TabIndex = 0;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -255,24 +245,34 @@
             this.ColumnBasisPayment.Name = "ColumnBasisPayment";
             this.ColumnBasisPayment.ReadOnly = true;
             // 
-            // btnClose
+            // panel4
             // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(605, 17);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Выход";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.panel4.Controls.Add(this.btnChoose);
+            this.panel4.Controls.Add(this.btnClose);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 242);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(703, 57);
+            this.panel4.TabIndex = 0;
             // 
             // btnChoose
             // 
-            this.btnChoose.Location = new System.Drawing.Point(524, 17);
+            this.btnChoose.Location = new System.Drawing.Point(535, 22);
             this.btnChoose.Name = "btnChoose";
             this.btnChoose.Size = new System.Drawing.Size(75, 23);
             this.btnChoose.TabIndex = 1;
             this.btnChoose.Text = "Выбрать";
             this.btnChoose.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.Location = new System.Drawing.Point(616, 22);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "Выход";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // FormBilledAccount
             // 
@@ -283,6 +283,8 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormBilledAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Выставленные счета";
@@ -291,8 +293,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
