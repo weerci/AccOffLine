@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnFindAccount = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbStatusAccount = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -43,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvBilledAccount = new System.Windows.Forms.DataGridView();
             this.ColumnNumberAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDateAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnFIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +56,7 @@
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBilledAccount)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +73,7 @@
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.Controls.Add(this.btnFindAccount);
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.cbStatusAccount);
             this.panel3.Controls.Add(this.textBox4);
             this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.textBox2);
@@ -96,14 +96,15 @@
             this.btnFindAccount.TabIndex = 10;
             this.btnFindAccount.Text = "Найти счет";
             this.btnFindAccount.UseVisualStyleBackColor = true;
+            this.btnFindAccount.Click += new System.EventHandler(this.btnFindAccount_Click);
             // 
-            // comboBox1
+            // cbStatusAccount
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(127, 94);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(224, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cbStatusAccount.FormattingEnabled = true;
+            this.cbStatusAccount.Location = new System.Drawing.Point(127, 94);
+            this.cbStatusAccount.Name = "cbStatusAccount";
+            this.cbStatusAccount.Size = new System.Drawing.Size(224, 21);
+            this.cbStatusAccount.TabIndex = 9;
             // 
             // textBox4
             // 
@@ -181,7 +182,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvBilledAccount);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 130);
@@ -189,25 +190,25 @@
             this.panel2.Size = new System.Drawing.Size(703, 299);
             this.panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgvBilledAccount
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvBilledAccount.AllowUserToAddRows = false;
+            this.dgvBilledAccount.AllowUserToDeleteRows = false;
+            this.dgvBilledAccount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvBilledAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBilledAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnNumberAccount,
             this.ColumnDateAccount,
             this.ColumnFIO,
             this.ColumnSummAccount,
             this.ColumnStatusAccount,
             this.ColumnBasisPayment});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(703, 242);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvBilledAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBilledAccount.Location = new System.Drawing.Point(0, 0);
+            this.dgvBilledAccount.Name = "dgvBilledAccount";
+            this.dgvBilledAccount.ReadOnly = true;
+            this.dgvBilledAccount.Size = new System.Drawing.Size(703, 242);
+            this.dgvBilledAccount.TabIndex = 1;
             // 
             // ColumnNumberAccount
             // 
@@ -290,12 +291,13 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Выставленные счета";
+            this.Load += new System.EventHandler(this.FormBilledAccount_Load);
             this.Resize += new System.EventHandler(this.FormBilledAccount_Resize);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBilledAccount)).EndInit();
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -309,7 +311,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbStatusAccount;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
@@ -317,7 +319,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnFindAccount;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvBilledAccount;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumberAccount;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDateAccount;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFIO;

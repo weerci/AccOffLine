@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcOffLine.Db;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,11 @@ namespace AcOffLine
         private void btnBillAccount_Click(object sender, EventArgs e)
         {
             new FormFindClient().ShowDialog();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            CsvPrototype.Item.LoadFile();
         }
     }
 }

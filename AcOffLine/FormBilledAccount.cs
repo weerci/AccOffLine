@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcOffLine.Db;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,27 @@ namespace AcOffLine
         private void btnChoose_Click(object sender, EventArgs e)
         {
             new FormStateAccount().ShowDialog();
+        }
+
+        private void FormBilledAccount_Load(object sender, EventArgs e)
+        {
+            cbStatusAccount.Items.AddRange(CsvPrototype.Item.Status.Select().Select(n=>n["name"]).ToArray());
+        }
+
+        private void btnFindAccount_Click(object sender, EventArgs e)
+        {
+            dgvBilledAccount.Columns.Clear();
+            DataTable dt = CsvPrototype.Item.Test;
+
+            dgvBilledAccount.DataSource = dt;
+            foreach (DataColumn dc in dt.Columns)
+                dgvBilledAccount.Columns[dc.ColumnName].HeaderText = dc.Caption;
+            dgvBilledAccount.Columns["bank"].Visible = false;
+            dgvBilledAccount.Columns["name"].Visible = false;
+            dgvBilledAccount.Columns["patronymic"].Visible = false;
+            dgvBilledAccount.Columns["phone"].Visible = false;
+            dgvBilledAccount.Columns["login"].Visible = false;
+
         }
     }
 }
