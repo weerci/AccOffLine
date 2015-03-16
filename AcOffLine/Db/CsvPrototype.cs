@@ -78,15 +78,15 @@ namespace AcOffLine.Db
                 try
                 {
                     DataRow dr = null;
-                    string[] bankValues = null;
+                    string[] statusValues = null;
 
-                    for (int i = 0; i < mBanks.Length; i++)
+                    for (int i = 0; i < mStatus.Length; i++)
                     {
-                        if (!String.IsNullOrEmpty(mBanks[i]))
+                        if (!String.IsNullOrEmpty(mStatus[i]))
                         {
-                            bankValues = mBanks[i].Split(',');
+                            statusValues = mStatus[i].Split(',');
                             dr = dt.NewRow();
-                            dr["name"] = bankValues[0];
+                            dr["name"] = statusValues[0];
                             dt.Rows.Add(dr);
                         }
                     }

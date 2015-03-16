@@ -34,7 +34,7 @@ namespace AcOffLine
                 tbLogin.Text = _dataRow[0].Cells["login"].Value.ToString();        
             }
 
-            //cbBank.Items.AddRange(CsvPrototype.Item.Status.Select().GroupBy(n =>n, n=>n).ToArray());
+            cbBank.Items.AddRange(CsvPrototype.Item.Banks.Select().Select(n=>n["name"]).Distinct().ToArray());
         }
 
         private void button3_Click(object sender, EventArgs e)
