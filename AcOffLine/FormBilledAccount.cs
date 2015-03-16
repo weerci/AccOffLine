@@ -30,7 +30,8 @@ namespace AcOffLine
 
         private void btnChoose_Click(object sender, EventArgs e)
         {
-            new FormStateAccount().ShowDialog();
+            FormStateAccount formStateAccount = new FormStateAccount(dgvBilledAccount.SelectedRows);
+            formStateAccount.ShowDialog();
         }
 
         private void FormBilledAccount_Load(object sender, EventArgs e)

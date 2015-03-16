@@ -34,8 +34,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tbLogin = new System.Windows.Forms.TextBox();
+            this.cbBank = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,12 +43,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbSurname = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbPatronic = new System.Windows.Forms.TextBox();
+            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.tbSum = new System.Windows.Forms.TextBox();
+            this.tbBasic = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 257);
+            this.panel1.Location = new System.Drawing.Point(0, 281);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(475, 57);
             this.panel1.TabIndex = 0;
@@ -67,7 +67,7 @@
             this.button2.Location = new System.Drawing.Point(286, 17);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 23);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 0;
             this.button2.Text = "Выставить счет";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -78,7 +78,7 @@
             this.button1.Location = new System.Drawing.Point(388, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Выход";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -100,29 +100,30 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Логин клиента:";
             // 
-            // textBox1
+            // tbLogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(130, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(333, 20);
-            this.textBox1.TabIndex = 3;
+            this.tbLogin.Location = new System.Drawing.Point(130, 36);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(333, 20);
+            this.tbLogin.TabIndex = 1;
             // 
-            // comboBox1
+            // cbBank
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(130, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(333, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbBank.FormattingEnabled = true;
+            this.cbBank.Location = new System.Drawing.Point(130, 11);
+            this.cbBank.Name = "cbBank";
+            this.cbBank.Size = new System.Drawing.Size(333, 21);
+            this.cbBank.TabIndex = 0;
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(388, 61);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
+            this.button3.TabIndex = 2;
             this.button3.Text = "Проверить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label3
             // 
@@ -178,59 +179,66 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Основание платежа:";
             // 
-            // textBox2
+            // tbSurname
             // 
-            this.textBox2.Location = new System.Drawing.Point(130, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(333, 20);
-            this.textBox2.TabIndex = 12;
+            this.tbSurname.Location = new System.Drawing.Point(130, 88);
+            this.tbSurname.Name = "tbSurname";
+            this.tbSurname.ReadOnly = true;
+            this.tbSurname.Size = new System.Drawing.Size(333, 20);
+            this.tbSurname.TabIndex = 3;
             // 
-            // textBox3
+            // tbName
             // 
-            this.textBox3.Location = new System.Drawing.Point(130, 116);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(333, 20);
-            this.textBox3.TabIndex = 13;
+            this.tbName.Location = new System.Drawing.Point(130, 116);
+            this.tbName.Name = "tbName";
+            this.tbName.ReadOnly = true;
+            this.tbName.Size = new System.Drawing.Size(333, 20);
+            this.tbName.TabIndex = 4;
             // 
-            // textBox4
+            // tbPatronic
             // 
-            this.textBox4.Location = new System.Drawing.Point(130, 144);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(333, 20);
-            this.textBox4.TabIndex = 14;
+            this.tbPatronic.Location = new System.Drawing.Point(130, 144);
+            this.tbPatronic.Name = "tbPatronic";
+            this.tbPatronic.ReadOnly = true;
+            this.tbPatronic.Size = new System.Drawing.Size(333, 20);
+            this.tbPatronic.TabIndex = 5;
             // 
-            // textBox5
+            // tbPhone
             // 
-            this.textBox5.Location = new System.Drawing.Point(130, 172);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(333, 20);
-            this.textBox5.TabIndex = 15;
+            this.tbPhone.Location = new System.Drawing.Point(130, 172);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.ReadOnly = true;
+            this.tbPhone.Size = new System.Drawing.Size(333, 20);
+            this.tbPhone.TabIndex = 6;
             // 
-            // textBox6
+            // tbSum
             // 
-            this.textBox6.Location = new System.Drawing.Point(130, 200);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(333, 20);
-            this.textBox6.TabIndex = 16;
+            this.tbSum.Location = new System.Drawing.Point(130, 200);
+            this.tbSum.Name = "tbSum";
+            this.tbSum.ReadOnly = true;
+            this.tbSum.Size = new System.Drawing.Size(333, 20);
+            this.tbSum.TabIndex = 7;
             // 
-            // textBox7
+            // tbBasic
             // 
-            this.textBox7.Location = new System.Drawing.Point(130, 228);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(333, 20);
-            this.textBox7.TabIndex = 17;
+            this.tbBasic.Location = new System.Drawing.Point(130, 228);
+            this.tbBasic.Multiline = true;
+            this.tbBasic.Name = "tbBasic";
+            this.tbBasic.ReadOnly = true;
+            this.tbBasic.Size = new System.Drawing.Size(333, 47);
+            this.tbBasic.TabIndex = 8;
             // 
             // FormInvoiceAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 314);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(475, 338);
+            this.Controls.Add(this.tbBasic);
+            this.Controls.Add(this.tbSum);
+            this.Controls.Add(this.tbPhone);
+            this.Controls.Add(this.tbPatronic);
+            this.Controls.Add(this.tbName);
+            this.Controls.Add(this.tbSurname);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -238,8 +246,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbBank);
+            this.Controls.Add(this.tbLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -251,6 +259,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Формирование счета";
+            this.Load += new System.EventHandler(this.FormInvoiceAccount_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -264,8 +273,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox tbLogin;
+        private System.Windows.Forms.ComboBox cbBank;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -273,11 +282,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbSurname;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbPatronic;
+        private System.Windows.Forms.TextBox tbPhone;
+        private System.Windows.Forms.TextBox tbSum;
+        private System.Windows.Forms.TextBox tbBasic;
     }
 }

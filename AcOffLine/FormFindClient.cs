@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcOffLine.Db;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,13 @@ namespace AcOffLine
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            new FormInvoiceAccount().ShowDialog();
+            FormInvoiceAccount formInvoiceAccount = new FormInvoiceAccount(null);
+            formInvoiceAccount.ShowDialog();
+        }
+        private void btnChoose_Click(object sender, EventArgs e)
+        {
+            FormInvoiceAccount formInvoiceAccount = new FormInvoiceAccount(dgvFindClient.SelectedRows);
+            formInvoiceAccount.ShowDialog();
         }
 
         private void FormFindClient_Load(object sender, EventArgs e)
@@ -27,9 +34,25 @@ namespace AcOffLine
 
         }
 
-        private void btnChoose_Click(object sender, EventArgs e)
+
+        private void btnFindClient_Click(object sender, EventArgs e)
         {
-            new FormInvoiceAccount().ShowDialog();
+            dgvFindClient.Columns.Clear();
+            DataTable dt = CsvPrototype.Item.Test;
+
+            dgvFindClient.DataSource = dt;
+            
+            foreach (DataColumn dc in dt.Columns)
+                dgvFindClient.Columns[dc.ColumnName].HeaderText = dc.Caption;
+
+            dgvFindClient.Columns["number"].Visible = false;
+            dgvFindClient.Columns["dt"].Visible = false;
+            dgvFindClient.Columns["bank"].Visible = false;
+            dgvFindClient.Columns["sum"].Visible = false;
+            dgvFindClient.Columns["status"].Visible = false;
+            dgvFindClient.Columns["basis"].Visible = false;
+            dgvFindClient.Columns["login"].Visible = false;
+
         }
     }
 }

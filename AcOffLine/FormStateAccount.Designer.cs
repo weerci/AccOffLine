@@ -42,15 +42,15 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tbNumberAccount = new System.Windows.Forms.TextBox();
+            this.tbDateAccount = new System.Windows.Forms.TextBox();
+            this.tbBank = new System.Windows.Forms.TextBox();
+            this.tbSurname = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbPatronic = new System.Windows.Forms.TextBox();
+            this.tbSum = new System.Windows.Forms.TextBox();
+            this.tbBasic = new System.Windows.Forms.TextBox();
+            this.tbStatus = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,84 +174,93 @@
             this.button1.Text = "Отменить";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbNumberAccount
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 20);
-            this.textBox1.TabIndex = 10;
+            this.tbNumberAccount.Location = new System.Drawing.Point(163, 6);
+            this.tbNumberAccount.Name = "tbNumberAccount";
+            this.tbNumberAccount.ReadOnly = true;
+            this.tbNumberAccount.Size = new System.Drawing.Size(366, 20);
+            this.tbNumberAccount.TabIndex = 0;
             // 
-            // textBox2
+            // tbDateAccount
             // 
-            this.textBox2.Location = new System.Drawing.Point(163, 34);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(366, 20);
-            this.textBox2.TabIndex = 11;
+            this.tbDateAccount.Location = new System.Drawing.Point(163, 34);
+            this.tbDateAccount.Name = "tbDateAccount";
+            this.tbDateAccount.ReadOnly = true;
+            this.tbDateAccount.Size = new System.Drawing.Size(366, 20);
+            this.tbDateAccount.TabIndex = 1;
             // 
-            // textBox3
+            // tbBank
             // 
-            this.textBox3.Location = new System.Drawing.Point(163, 62);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(366, 20);
-            this.textBox3.TabIndex = 12;
+            this.tbBank.Location = new System.Drawing.Point(163, 62);
+            this.tbBank.Name = "tbBank";
+            this.tbBank.ReadOnly = true;
+            this.tbBank.Size = new System.Drawing.Size(366, 20);
+            this.tbBank.TabIndex = 2;
             // 
-            // textBox4
+            // tbSurname
             // 
-            this.textBox4.Location = new System.Drawing.Point(163, 90);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(366, 20);
-            this.textBox4.TabIndex = 13;
+            this.tbSurname.Location = new System.Drawing.Point(163, 90);
+            this.tbSurname.Name = "tbSurname";
+            this.tbSurname.ReadOnly = true;
+            this.tbSurname.Size = new System.Drawing.Size(366, 20);
+            this.tbSurname.TabIndex = 3;
             // 
-            // textBox5
+            // tbName
             // 
-            this.textBox5.Location = new System.Drawing.Point(163, 118);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(366, 20);
-            this.textBox5.TabIndex = 14;
+            this.tbName.Location = new System.Drawing.Point(163, 118);
+            this.tbName.Name = "tbName";
+            this.tbName.ReadOnly = true;
+            this.tbName.Size = new System.Drawing.Size(366, 20);
+            this.tbName.TabIndex = 4;
             // 
-            // textBox6
+            // tbPatronic
             // 
-            this.textBox6.Location = new System.Drawing.Point(163, 146);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(366, 20);
-            this.textBox6.TabIndex = 15;
+            this.tbPatronic.Location = new System.Drawing.Point(163, 146);
+            this.tbPatronic.Name = "tbPatronic";
+            this.tbPatronic.ReadOnly = true;
+            this.tbPatronic.Size = new System.Drawing.Size(366, 20);
+            this.tbPatronic.TabIndex = 5;
             // 
-            // textBox7
+            // tbSum
             // 
-            this.textBox7.Location = new System.Drawing.Point(163, 174);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(366, 20);
-            this.textBox7.TabIndex = 16;
+            this.tbSum.Location = new System.Drawing.Point(163, 174);
+            this.tbSum.Name = "tbSum";
+            this.tbSum.ReadOnly = true;
+            this.tbSum.Size = new System.Drawing.Size(366, 20);
+            this.tbSum.TabIndex = 6;
             // 
-            // textBox8
+            // tbBasic
             // 
-            this.textBox8.Location = new System.Drawing.Point(163, 203);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(366, 58);
-            this.textBox8.TabIndex = 17;
+            this.tbBasic.Location = new System.Drawing.Point(163, 203);
+            this.tbBasic.Multiline = true;
+            this.tbBasic.Name = "tbBasic";
+            this.tbBasic.ReadOnly = true;
+            this.tbBasic.Size = new System.Drawing.Size(366, 58);
+            this.tbBasic.TabIndex = 7;
             // 
-            // textBox9
+            // tbStatus
             // 
-            this.textBox9.Location = new System.Drawing.Point(163, 271);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(366, 20);
-            this.textBox9.TabIndex = 18;
+            this.tbStatus.Location = new System.Drawing.Point(163, 271);
+            this.tbStatus.Name = "tbStatus";
+            this.tbStatus.ReadOnly = true;
+            this.tbStatus.Size = new System.Drawing.Size(366, 20);
+            this.tbStatus.TabIndex = 8;
             // 
             // FormStateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 365);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbStatus);
+            this.Controls.Add(this.tbBasic);
+            this.Controls.Add(this.tbSum);
+            this.Controls.Add(this.tbPatronic);
+            this.Controls.Add(this.tbName);
+            this.Controls.Add(this.tbSurname);
+            this.Controls.Add(this.tbBank);
+            this.Controls.Add(this.tbDateAccount);
+            this.Controls.Add(this.tbNumberAccount);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -270,6 +279,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Состояние счета";
+            this.Load += new System.EventHandler(this.FormStateAccount_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -291,14 +301,14 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tbNumberAccount;
+        private System.Windows.Forms.TextBox tbDateAccount;
+        private System.Windows.Forms.TextBox tbBank;
+        private System.Windows.Forms.TextBox tbSurname;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbPatronic;
+        private System.Windows.Forms.TextBox tbSum;
+        private System.Windows.Forms.TextBox tbBasic;
+        private System.Windows.Forms.TextBox tbStatus;
     }
 }

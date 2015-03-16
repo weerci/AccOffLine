@@ -93,7 +93,7 @@
             this.btnFindAccount.Location = new System.Drawing.Point(374, 54);
             this.btnFindAccount.Name = "btnFindAccount";
             this.btnFindAccount.Size = new System.Drawing.Size(75, 23);
-            this.btnFindAccount.TabIndex = 10;
+            this.btnFindAccount.TabIndex = 5;
             this.btnFindAccount.Text = "Найти счет";
             this.btnFindAccount.UseVisualStyleBackColor = true;
             this.btnFindAccount.Click += new System.EventHandler(this.btnFindAccount_Click);
@@ -104,35 +104,35 @@
             this.cbStatusAccount.Location = new System.Drawing.Point(127, 94);
             this.cbStatusAccount.Name = "cbStatusAccount";
             this.cbStatusAccount.Size = new System.Drawing.Size(224, 21);
-            this.cbStatusAccount.TabIndex = 9;
+            this.cbStatusAccount.TabIndex = 4;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(127, 72);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(224, 20);
-            this.textBox4.TabIndex = 8;
+            this.textBox4.TabIndex = 3;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(127, 50);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(224, 20);
-            this.textBox3.TabIndex = 7;
+            this.textBox3.TabIndex = 2;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(127, 28);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(224, 20);
-            this.textBox2.TabIndex = 6;
+            this.textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(127, 6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(224, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBox1.TabIndex = 0;
             // 
             // label5
             // 
@@ -205,8 +205,11 @@
             this.ColumnBasisPayment});
             this.dgvBilledAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBilledAccount.Location = new System.Drawing.Point(0, 0);
+            this.dgvBilledAccount.MultiSelect = false;
             this.dgvBilledAccount.Name = "dgvBilledAccount";
             this.dgvBilledAccount.ReadOnly = true;
+            this.dgvBilledAccount.RowHeadersWidth = 18;
+            this.dgvBilledAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBilledAccount.Size = new System.Drawing.Size(703, 242);
             this.dgvBilledAccount.TabIndex = 1;
             // 
@@ -261,7 +264,7 @@
             this.btnChoose.Location = new System.Drawing.Point(535, 17);
             this.btnChoose.Name = "btnChoose";
             this.btnChoose.Size = new System.Drawing.Size(75, 23);
-            this.btnChoose.TabIndex = 1;
+            this.btnChoose.TabIndex = 0;
             this.btnChoose.Text = "Выбрать";
             this.btnChoose.UseVisualStyleBackColor = true;
             this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
@@ -272,7 +275,7 @@
             this.btnClose.Location = new System.Drawing.Point(616, 17);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 0;
+            this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Выход";
             this.btnClose.UseVisualStyleBackColor = true;
             // 

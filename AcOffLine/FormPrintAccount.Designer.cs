@@ -32,14 +32,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbBasic = new System.Windows.Forms.TextBox();
+            this.tbSum = new System.Windows.Forms.TextBox();
+            this.tbParent = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbSurname = new System.Windows.Forms.TextBox();
+            this.tbLogin = new System.Windows.Forms.TextBox();
+            this.tbAccountDate = new System.Windows.Forms.TextBox();
+            this.tbNumberAccount = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tbBank = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +72,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Печать счета";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -84,62 +85,62 @@
             this.button1.Text = "Выход";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // tbBasic
             // 
-            this.textBox8.Location = new System.Drawing.Point(166, 246);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(381, 58);
-            this.textBox8.TabIndex = 35;
+            this.tbBasic.Location = new System.Drawing.Point(166, 246);
+            this.tbBasic.Multiline = true;
+            this.tbBasic.Name = "tbBasic";
+            this.tbBasic.Size = new System.Drawing.Size(381, 58);
+            this.tbBasic.TabIndex = 35;
             // 
-            // textBox7
+            // tbSum
             // 
-            this.textBox7.Location = new System.Drawing.Point(166, 217);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(381, 20);
-            this.textBox7.TabIndex = 34;
+            this.tbSum.Location = new System.Drawing.Point(166, 217);
+            this.tbSum.Name = "tbSum";
+            this.tbSum.Size = new System.Drawing.Size(381, 20);
+            this.tbSum.TabIndex = 34;
             // 
-            // textBox6
+            // tbParent
             // 
-            this.textBox6.Location = new System.Drawing.Point(166, 189);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(381, 20);
-            this.textBox6.TabIndex = 33;
+            this.tbParent.Location = new System.Drawing.Point(166, 189);
+            this.tbParent.Name = "tbParent";
+            this.tbParent.Size = new System.Drawing.Size(381, 20);
+            this.tbParent.TabIndex = 33;
             // 
-            // textBox5
+            // tbName
             // 
-            this.textBox5.Location = new System.Drawing.Point(166, 161);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(381, 20);
-            this.textBox5.TabIndex = 32;
+            this.tbName.Location = new System.Drawing.Point(166, 161);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(381, 20);
+            this.tbName.TabIndex = 32;
             // 
-            // textBox4
+            // tbSurname
             // 
-            this.textBox4.Location = new System.Drawing.Point(166, 133);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(381, 20);
-            this.textBox4.TabIndex = 31;
+            this.tbSurname.Location = new System.Drawing.Point(166, 133);
+            this.tbSurname.Name = "tbSurname";
+            this.tbSurname.Size = new System.Drawing.Size(381, 20);
+            this.tbSurname.TabIndex = 31;
             // 
-            // textBox3
+            // tbLogin
             // 
-            this.textBox3.Location = new System.Drawing.Point(166, 68);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(381, 20);
-            this.textBox3.TabIndex = 30;
+            this.tbLogin.Location = new System.Drawing.Point(166, 68);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(381, 20);
+            this.tbLogin.TabIndex = 30;
             // 
-            // textBox2
+            // tbAccountDate
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(381, 20);
-            this.textBox2.TabIndex = 29;
+            this.tbAccountDate.Location = new System.Drawing.Point(166, 40);
+            this.tbAccountDate.Name = "tbAccountDate";
+            this.tbAccountDate.Size = new System.Drawing.Size(381, 20);
+            this.tbAccountDate.TabIndex = 29;
             // 
-            // textBox1
+            // tbNumberAccount
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(381, 20);
-            this.textBox1.TabIndex = 28;
+            this.tbNumberAccount.Location = new System.Drawing.Point(166, 12);
+            this.tbNumberAccount.Name = "tbNumberAccount";
+            this.tbNumberAccount.Size = new System.Drawing.Size(381, 20);
+            this.tbNumberAccount.TabIndex = 28;
             // 
             // label8
             // 
@@ -213,12 +214,12 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Выставлен счет №:";
             // 
-            // textBox9
+            // tbBank
             // 
-            this.textBox9.Location = new System.Drawing.Point(166, 99);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(381, 20);
-            this.textBox9.TabIndex = 37;
+            this.tbBank.Location = new System.Drawing.Point(166, 99);
+            this.tbBank.Name = "tbBank";
+            this.tbBank.Size = new System.Drawing.Size(381, 20);
+            this.tbBank.TabIndex = 37;
             // 
             // label9
             // 
@@ -234,16 +235,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 377);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.tbBank);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbBasic);
+            this.Controls.Add(this.tbSum);
+            this.Controls.Add(this.tbParent);
+            this.Controls.Add(this.tbName);
+            this.Controls.Add(this.tbSurname);
+            this.Controls.Add(this.tbLogin);
+            this.Controls.Add(this.tbAccountDate);
+            this.Controls.Add(this.tbNumberAccount);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -261,6 +262,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Просмотр и печать счета";
+            this.Load += new System.EventHandler(this.FormPrintAccount_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -272,14 +274,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbBasic;
+        private System.Windows.Forms.TextBox tbSum;
+        private System.Windows.Forms.TextBox tbParent;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbSurname;
+        private System.Windows.Forms.TextBox tbLogin;
+        private System.Windows.Forms.TextBox tbAccountDate;
+        private System.Windows.Forms.TextBox tbNumberAccount;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -288,7 +290,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tbBank;
         private System.Windows.Forms.Label label9;
     }
 }

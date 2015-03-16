@@ -44,7 +44,7 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.btnChoose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvFindClient = new System.Windows.Forms.DataGridView();
             this.ColumnFIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnParentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +52,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFindClient)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,37 +77,38 @@
             this.btnFindClient.Location = new System.Drawing.Point(493, 46);
             this.btnFindClient.Name = "btnFindClient";
             this.btnFindClient.Size = new System.Drawing.Size(96, 23);
-            this.btnFindClient.TabIndex = 17;
+            this.btnFindClient.TabIndex = 4;
             this.btnFindClient.Text = "Найти клиента";
             this.btnFindClient.UseVisualStyleBackColor = true;
+            this.btnFindClient.Click += new System.EventHandler(this.btnFindClient_Click);
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(105, 78);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(358, 20);
-            this.textBox4.TabIndex = 16;
+            this.textBox4.TabIndex = 3;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(105, 56);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(358, 20);
-            this.textBox3.TabIndex = 15;
+            this.textBox3.TabIndex = 2;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(105, 34);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(358, 20);
-            this.textBox2.TabIndex = 14;
+            this.textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(105, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(358, 20);
-            this.textBox1.TabIndex = 13;
+            this.textBox1.TabIndex = 0;
             // 
             // label4
             // 
@@ -188,29 +189,32 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dgvFindClient);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 115);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(703, 257);
             this.panel3.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgvFindClient
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvFindClient.AllowUserToAddRows = false;
+            this.dgvFindClient.AllowUserToDeleteRows = false;
+            this.dgvFindClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFindClient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnFIO,
             this.ColumnName,
             this.ColumnParentName,
             this.ColumnPhone});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(703, 257);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvFindClient.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFindClient.Location = new System.Drawing.Point(0, 0);
+            this.dgvFindClient.MultiSelect = false;
+            this.dgvFindClient.Name = "dgvFindClient";
+            this.dgvFindClient.ReadOnly = true;
+            this.dgvFindClient.RowHeadersWidth = 18;
+            this.dgvFindClient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFindClient.Size = new System.Drawing.Size(703, 257);
+            this.dgvFindClient.TabIndex = 0;
             // 
             // ColumnFIO
             // 
@@ -257,7 +261,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFindClient)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -279,7 +283,7 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnChoose;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvFindClient;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnParentName;
